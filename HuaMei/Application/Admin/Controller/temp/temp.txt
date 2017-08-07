@@ -1,0 +1,32 @@
+	   switch($type)
+	   {
+		   case "NewsController" :   switch($action)
+		                          {
+									  case "add" :  C("News")->add($title,$content);                  break;
+									  case "drop":  C("News")->drop($newsId);                         break;
+									  case "modify":C("News")->modify($newsId,$type,$content);        break;
+									  case "see":   C("News")->see();                                 break;
+								  };break;
+		   case "ExpertController":  switch($action)
+		                          {
+									  case "add" :  C("Expert")->add($name,$position,$describe);      break;
+									  case "drop":  C("Expert")->drop($nameId);                       break;
+									  case "modify":C("Expert")->modify($nameId,$type,$content);      break;
+									  case "see":   C("Expert")->see();                               break;
+								  };break;
+		   case "ProductsController":switch($action)
+		                          {
+									  case "add" :  C("Products")->add($name,$picture);               break;
+									  case "drop":  C("Products")->drop($productId);                  break;
+									  case "modify":C("Products")->modify($productId,$type,$content); break;
+									  case "see":   C("Products")->see();                             break;
+								  };break;
+		   case "SuexController":    switch($action)
+		                          {
+									  case "add" :  C("Suex")->add($name,$age,$school,$describe);     break;
+									  case "drop":  C("Suex")->drop($nameId);                         break;
+									  case "modify":C("Suex")->modify($nameId,$type,$content);        break;
+									  case "see":   C("Suex")->see();                                 break;
+								  };break;
+		   default:break;
+	   }
